@@ -1,3 +1,3 @@
-@secion('content')
+@section('content')
 
 @stop
