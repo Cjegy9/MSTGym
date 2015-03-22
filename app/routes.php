@@ -11,16 +11,12 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
 
-
-Route::get('/test', function()
-{
-    return View::make('test');
-});
-
-
-Route::controller('test', 'User\TestController');
+Route::controller('/', 'User\HomeController');
+Route::controller('classes', 'User\ClassesController');
+Route::controller('facilities', 'User\FacilitiesController');
+Route::controller('locate', 'User\LocateController');
+Route::controller('membership', 'User\MembershipController');
+Route::controller('Schedule', 'User\ScheduleController');
+Route::controller('trainers', 'User\TrainersController');
+Route::controller('home', 'User\HomeController');

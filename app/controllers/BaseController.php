@@ -2,9 +2,11 @@
 
 class BaseController extends Controller {
 
+    protected $user;
+
     public function __construct()
     {
-
+        \View::share('user', $this->user);
     }
 	/**
 	 * Setup the layout used by the controller.

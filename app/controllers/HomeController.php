@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\View\Factory as View;
+
 class HomeController extends BaseController {
 
 	/*
@@ -14,10 +16,19 @@ class HomeController extends BaseController {
 	|	Route::get('/', 'HomeController@showWelcome');
 	|
 	*/
+    protected $layout = 'layouts.index';
+
+    private $view;
+
+    public function __construct(View $view)
+    {
+        parent::__construct();
+        $this->view = $view;
+    }
 
 	public function showWelcome()
 	{
-		return View::make('hello');
+		$this->layout->content = $this->view->make('pages.index');
 	}
 
 }

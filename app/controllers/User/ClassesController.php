@@ -2,7 +2,7 @@
 
 use Illuminate\View\Factory as View;
 
-class TestController extends \BaseController {
+class ClassesController extends \BaseController {
 
     protected $layout = 'layouts.index';
 
@@ -16,6 +16,6 @@ class TestController extends \BaseController {
 
     public function getIndex()
     {
-        $this->layout->content = $this->view->make('pages.test.index');
+        $this->layout->content = $this->view->make('pages.classes.index');
     }
 }
