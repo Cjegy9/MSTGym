@@ -1,7 +1,9 @@
 @extends('layouts.master')
 
 @section('header')
-
+    <header>
+        @include('includes.globals.header')
+    </header>
 @stop
 
 @section('main')
@@ -9,5 +11,5 @@
 @stop
 
 @section('footer')
-
+    @include('includes.globals.footer')
 @stop
