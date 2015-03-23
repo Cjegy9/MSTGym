@@ -8,6 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     {{ HTML::style('css/semantic.min.css') }}
     {{ HTML::style('css/main.css') }}
+    {{ HTML::style('css/lean-slider.css') }}
     @yield('extra-css', '')
     @yield('inline-css', '')
 </head>
@@ -21,6 +22,7 @@
         </div>
         {{ HTML::script('javascript/jquery.min.js') }}
         {{ HTML::script('javascript/semantic.min.js') }}
+        {{ HTML::script('javascript/lean-slider.min.js') }}
         @yield('extra-js', '')
         @yield('inline-js', '')
     </div>
