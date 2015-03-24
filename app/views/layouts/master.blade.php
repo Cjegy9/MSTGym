@@ -22,7 +22,7 @@
         </div>
         {{ HTML::script('javascript/jquery.min.js') }}
         {{ HTML::script('javascript/semantic.min.js') }}
-        {{ HTML::script('javascript/lean-slider.min.js') }}
+        {{ HTML::script('javascript/lean-slider.js') }}
         @yield('extra-js', '')
         @yield('inline-js', '')
     </div>
