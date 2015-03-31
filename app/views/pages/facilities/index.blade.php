@@ -29,6 +29,22 @@
         <div class="seven wide column">
             <img src="{{ asset('images/pool.png') }}" align="right" height="200" width="300" alt=""/>
         </div>
+        <div class="seven wide column">
+            <img src="{{ asset('images/cycle-studio.png') }}" height="200" width="300" alt=""/>
+        </div>
+        <div class="nine wide column">
+            <p>
+                This is where the information for the Spinning studio will go.
+            </p>
+        </div>
+        <div class="nine wide column">
+            <p>
+                This is where the information for the Yoga Studio will go.
+            </p>
+        </div>
+        <div class="seven wide column">
+            <img src="{{ asset('images/yoga-studio.png') }}" align="right" height="200" width="300" alt=""/>
+        </div>
     </div>
 
 @stop
