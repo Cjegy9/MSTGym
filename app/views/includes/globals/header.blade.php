@@ -1,4 +1,29 @@
+<div class="ui grid">
+<div class="eight wide column">
+
 <img  class="logo" src="{{ asset('images/gym-logo.png')}}" />
+
+</div>
+<div class="eight wide column" style="vertical-align: bottom">
+<form class="ui form" style="vertical-align: bottom;">
+            <div class="three fields">
+                <div class="required field" style="float: right; padding-right: 0px; margin-bottom: 0px;">
+                    <div class="ui icon input">
+                        <input type="password" placeholder="Password">
+                    </div>
+                </div>
+                <div class="required field" style="float: right; margin-bottom: 0px;">
+                    <div class="ui icon input">
+                        <input type="text" placeholder="Username">
+                    </div>
+                </div>
+                <div class="required field" style="text-align: right;">
+            <div class="ui submit button">Login</div>
+            </div>
+            </div>
+        </form>
+</div>
+</div>
 <div class="ui inverted menu">
   <a href="/home" class="item">
     <i></i> Home
