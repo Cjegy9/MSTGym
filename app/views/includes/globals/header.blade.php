@@ -1,10 +1,10 @@
 <div class="ui grid">
-<div class="eight wide column">
+<div class="six wide column">
 
 <img  class="logo" src="{{ asset('images/gym-logo.png')}}" />
 
 </div>
-<div class="eight wide column" style="vertical-align: bottom">
+<div class="ten wide column" style="vertical-align: bottom">
 <form class="ui form" style="vertical-align: bottom;">
             <div class="three fields">
                 <div class="required field" style="float: right; padding-right: 0px; margin-bottom: 0px;">
