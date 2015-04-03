@@ -2,18 +2,21 @@
 
     <div class="sixteen wide column">
         <div class="slider-wrapper">
-            <div id="slider" >
-                <div class="slide1">
-                    <img src="{{ asset('images/weights.png') }}" width="150" height="300" alt=""/>
+            <div id="slider" class="lean-slider">
+                <div class="slide1 lean-slider-slide">
+                                    <img src="images/yoga-studio.png" alt=""/>
+                                </div>
+                <div class="slide2 lean-slider-slide">
+                    <img src="{{ asset('images/crossfit.png') }}" alt=""/>
                 </div>
-                <div class="slide2">
-                    <img src="{{ asset('images/pool.png') }}" width="150" height="300" alt=""/>
+                <div class="slide3 lean-slider-slide">
+                    <img src="{{ asset('images/pool.png') }}"height="350px" alt=""/>
                 </div>
-                <div class="slide3">
-                    <img src="{{ asset('images/cycle-studio.png') }}" width="150" height="300" alt=""/>
+                <div class="slide4 lean-slider-slide">
+                    <img src="{{ asset('images/cycle-studio.png') }}" height="350px" alt=""/>
                 </div>
-                <div class="slide4">
-                    <img src="{{ asset('images/yoga-studio.png') }}" width="150" height="300" alt=""/>
+                <div class="slide5 lean-slider-slide">
+                    <img src="images/yoga-studio.png" height="350px" alt=""/>
                 </div>
             </div>
         </div>
@@ -26,53 +29,20 @@
         </div>
     </div>
     <div class="sixteen wide column">
-        <div class="ui accordion">
-            <div class="active title">
-            <i class="dropdown icon"></i>
-                Crossfit
-            </div>
-            <div class="active content">
-                <p>
-                    This is where the content for crossfit will go
-                </p>
-            </div>
-            <div class="title">
-            <i class="dropdown icon"></i>
-                Pilates
-            </div>
-            <div class="content">
-                <p>
-                    This is where the content for pilates will go
-                </p>
-            </div>
-            <div class="title">
-            <i class="dropdown icon"></i>
-                Zumba
-            </div>
-            <div class="content">
-                <p>
-                    This is where the content for class zumba go
-                </p>
-            </div>
-            <div class="title">
-                <i class="dropdown icon"></i>
-                Spinnging
-            </div>
-            <div class="content">
-                <p>
-                    This is where the content for spinning will go.
-                </p>
-            </div>
-            <div class="title">
-                <i class="dropdown icon"></i>
-                Yoga
-            </div>
-            <div class="content">
-                <p>
-                    This is where the content for Yoga will go.
-                </p>
-            </div>
+        <div class="ui top attached green tabular menu">
+            <a class="active item" data-tab="classes">Classes</a>
+            <a class="item" data-tab="crossfit">Crossfit</a>
+            <a class="item" data-tab="pilates">Pilates</a>
+            <a class="item" data-tab="zumba">Zumba</a>
+            <a class="item" data-tab="spinning">Spinning</a>
+            <a class="item" data-tab="yoga">Yoga</a>
         </div>
+        <div class="ui bottom attached active tab segment" data-tab="classes">This will be information about the different classes and what classes and do for you.</div>
+        <div class="ui bottom attached tab segment" data-tab="crossfit">Information for Crossfit</div>
+        <div class="ui bottom attached tab segment" data-tab="pilates">Information for Pilates</div>
+        <div class="ui bottom attached tab segment" data-tab="zumba">Information for Zumba</div>
+        <div class="ui bottom attached tab segment" data-tab="spinning">Information for Spinning</div>
+        <div class="ui bottom attached tab segment" data-tab="yoga">Information for Yoga</div>
     </div>
     <div class="sixteen wide column">
     <br />
@@ -98,7 +68,7 @@
 
 @section('inline-js')
     <script type="text/javascript">
-    $('.ui.accordion').accordion();
+    $('.tabular.menu .item').tab();
     $(document).ready(function() {
         $('#slider').leanSlider();
     });

@@ -27,3 +27,8 @@
     display: none;
 }
 .lean-slider-slide.current { display: block; }
+
+.lean-slider-slide img {
+    display: block;
+    width: 100%;
+}
