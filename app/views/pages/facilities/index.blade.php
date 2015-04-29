@@ -1,4 +1,5 @@
 @section('content')
+<div class="ui grid">
     <div class="sixteen wide column">
         <div class="slider-wrapper">
             <div id="slider" >
@@ -12,15 +13,21 @@
         </div>
     </div>
 
-    <div class="ui grid">
-        <div class="seven wide column">
-            <img src="{{ asset('images/weights.png') }}" height="200" width="300" alt=""/>
+        <div class="sixteen wide column">
+            <div class="ui segment">
+                <div class="ui grid">
+                    <div class="six wide column">
+                        <img src="{{ asset('images/weights.png') }}" height="200" width="300" alt=""/>
+                    </div>
+                    <div class="ten wide column">
+                        <p>
+                            This is where the information about the weight room will go.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="nine wide column">
-            <p>
-                This is where the information about the weight room will go.
-            </p>
-        </div>
+
         <div class="nine wide column">
             <p>
                 This is where the information for the pool will go.
