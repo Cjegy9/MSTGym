@@ -2,7 +2,7 @@
 <div class="sixteen wide column">
     <div class="ui segment">
         <form class="ui form">
-            <h4 class="ui dividing header">Login</h4>
+            <h4 class="ui dividing header" style="color: #78b638">Login</h4>
             <div class="two fields">
                 <div class="field">
                     <label>Username</label>
@@ -19,7 +19,7 @@
 
     <div class="ui segment">
         <div class="ui form">
-            <h4 class="ui dividing header">Create Account</h4>
+            <h4 class="ui dividing header" style="color: #78b638">Create Account</h4>
             <div class="fields">
                 <div class="ten wide field">
                     <label>Name</label>
@@ -87,7 +87,7 @@
                     </div>
                 </div>
 
-                <h4 class="ui dividing header hide" id="payment_header">Payment Information</h4>
+                <h4 class="ui dividing header hide" id="payment_header" style="color: #78b638">Payment Information</h4>
                 <div class="fields hide" id="payment_fields">
                     <div class="sixteen wide field">
                         <div class="four fields">

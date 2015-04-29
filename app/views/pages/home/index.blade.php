@@ -29,13 +29,13 @@
         </div>
     </div>
     <div class="sixteen wide column">
-        <div class="ui top attached green tabular menu">
-            <a class="active item" data-tab="classes">Classes</a>
-            <a class="item" data-tab="crossfit">Crossfit</a>
-            <a class="item" data-tab="pilates">Pilates</a>
-            <a class="item" data-tab="zumba">Zumba</a>
-            <a class="item" data-tab="spinning">Spinning</a>
-            <a class="item" data-tab="yoga">Yoga</a>
+        <div class="ui top attached tabular menu" style="border-color: #78b638">
+            <a class="active item" data-tab="classes" style="color:#78b638">Classes</a>
+            <a class="item" data-tab="crossfit" style="color:#78b638">Crossfit</a>
+            <a class="item" data-tab="pilates" style="color:#78b638">Pilates</a>
+            <a class="item" data-tab="zumba" style="color:#78b638">Zumba</a>
+            <a class="item" data-tab="spinning" style="color:#78b638">Spinning</a>
+            <a class="item" data-tab="yoga" style="color:#78b638">Yoga</a>
         </div>
         <div class="ui bottom attached active tab segment" data-tab="classes">This will be information about the different classes and what classes and do for you.</div>
         <div class="ui bottom attached tab segment" data-tab="crossfit">Information for Crossfit</div>
