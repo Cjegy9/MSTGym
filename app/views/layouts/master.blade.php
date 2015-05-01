@@ -9,6 +9,7 @@
     {{ HTML::style('css/semantic.min.css') }}
     {{ HTML::style('css/main.css') }}
     {{ HTML::style('css/lean-slider.css') }}
+    {{ HTML::style('css/fullcalendar.css') }}
     @yield('extra-css', '')
     @yield('inline-css', '')
 </head>
@@ -23,6 +24,8 @@
         {{ HTML::script('javascript/jquery.min.js') }}
         {{ HTML::script('javascript/semantic.min.js') }}
         {{ HTML::script('javascript/lean-slider.js') }}
+        {{ HTML::script('javascript/moment.min.js') }}
+        {{ HTML::script('javascript/fullcalendar.js') }}
         @yield('extra-js', '')
         @yield('inline-js', '')
     </div>

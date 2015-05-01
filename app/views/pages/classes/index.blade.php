@@ -1,5 +1,5 @@
 @section('content')
-<div class="sixteen wide column">
+{{--<div class="sixteen wide column">
     <div class="slider-wrapper">
         <div id="slider" >
             <div class="slide1">
@@ -10,7 +10,11 @@
             </div>
         </div>
     </div>
-</div>
+</div>--}}
+
+
+
+
 
 @stop
 
