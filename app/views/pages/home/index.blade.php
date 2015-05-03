@@ -93,7 +93,12 @@
             <div class="ui three column grid">
               <div class="column">
                 <div class="ui horizontal segment">
-                  <p style="color:#78b638; text-align: center">Silver Membership</p>
+                  <p style="color:#78b638; text-align: center">
+                  Silver Membership
+                  <ul class="ul list">
+                    <li></li>
+                  </ul>
+                  </p>
                 </div>
               </div>
               <div class="column">

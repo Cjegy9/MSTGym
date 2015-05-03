@@ -1,44 +1,27 @@
 @section('content')
 <div class="sixteen wide column">
     <div class="ui segment">
-        <form class="ui form">
-            <h4 class="ui dividing header" style="color: #78b638">Login</h4>
-            <div class="two fields">
-                <div class="field">
-                    <label>Username</label>
-                    <input type="text" placeholder="Username">
-                </div>
-                <div class="field">
-                    <label>Password</label>
-                    <input type="password" placeholder="Password">
-                </div>
-            </div>
-            <div class="ui submit button">Login</div>
-        </form>
-    </div>
-
-    <div class="ui segment">
-        <div class="ui form">
+        {{ Form::open(array('url' => 'register', 'class' => 'ui form')) }}
             <h4 class="ui dividing header" style="color: #78b638">Create Account</h4>
             <div class="fields">
                 <div class="ten wide field">
-                    <label>Name</label>
+                    {{ Form::label('last_name', 'Name') }}
                     <div class="two fields">
                         <div class="field">
-                            <input type="text" placeholder="First Name">
+                            {{ Form::text('first_name', '', array('placeholder' => 'First Name', 'id' => 'first_name')) }}
                         </div>
                         <div class="field">
-                            <input type="text" placeholder="Last Name">
+                            <input type="text" placeholder="Last Name" id="last_name" name="last_name">
                          </div>
                     </div>
                 </div>
                 <div class="two wide field">
                     <label>Middle Initial</label>
-                    <input type="text" placeholder="MI">
+                    <input type="text" placeholder="MI" name="middle_initial">
                 </div>
                 <div class="four wide field">
                     <label>Date of Birth</label>
-                    <input type="date">
+                    <input type="date" name="d_o_b">
                 </div>
             </div>
                 <div class="fields">
@@ -46,16 +29,16 @@
                         <label>Address</label>
                         <div class="four fields">
                             <div class="field">
-                                <input type="text" placeholder="Street">
+                                <input type="text" placeholder="Street" name="street">
                             </div>
                             <div class="field">
-                                <input type="text" placeholder="City">
+                                <input type="text" placeholder="City" name="city">
                             </div>
                             <div class="field">
-                                <input type="text" placeholder="State">
+                                <input type="text" placeholder="State" name="state">
                             </div>
                             <div class="field">
-                                <input type="number" placeholder="Zip Code">
+                                <input type="number" placeholder="Zip Code" name="zip_code">
                             </div>
                         </div>
                     </div>
@@ -65,25 +48,19 @@
                         <label>Account Info</label>
                         <div class="three fields">
                             <div class="field">
-                                <input type="email" placeholder="Email">
+                                <input type="email" placeholder="Email" name="email">
                             </div>
                             <div class="field">
-                                <input type="password" placeholder="Password">
+                                <input type="password" placeholder="Password" name="password">
                             </div>
                             <div class="field">
-                                <input type="password" placeholder="Retype Password">
+                                <input type="password" placeholder="Retype Password" name="password">
                             </div>
                         </div>
                     </div>
                     <div class="four wide field">
                         <label>Membership</label>
-                        <select class="ui search dropdown" id="mem_level">
-                            <option value="">Membership Level</option>
-                            <option value="">None</option>
-                            <option value="Silver">Silver - $20/month</option>
-                            <option vlaue="Gold">Gold - $40/month</option>
-                            <option vlaue="Platinum">Platinum - $60/month</option>
-                        </select>
+                        {{ Form::select('membership', $mem_level_dropdown, '', array('class' => 'ui search dropdown', 'id' => 'mem_level')) }}
                     </div>
                 </div>
 
@@ -92,28 +69,22 @@
                     <div class="sixteen wide field">
                         <div class="four fields">
                             <div class="field">
-                                <input type="text" placeholder="Name on Card">
+                                <input type="text" placeholder="Name on Card" name="card_name">
                             </div>
                             <div class="field">
-                                <input type="number" placeholder="Card Number">
+                                <input type="number" placeholder="Card Number" name="card_number">
                             </div>
                             <div class="field">
-                                <input type="date" placeholder="MM/DD/YYYY">
+                                <input type="date" placeholder="MM/DD/YYYY" name="card_exp">
                             </div>
                             <div class="field">
-                            <select class="ui search dropdown">
-                                <option value="">Card Type</option>
-                                <option value="Visa">Visa</option>
-                                <option value="American Express">American Express</option>
-                                <option value="MasterCard">MasterCard</option>
-                                <option value="Discover">Discover</option>
-                            </select>
+                            {{ Form::select('card_type', $card_type_dropdown, '', array('class' => 'ui search dropdown', 'id' => 'card_type')) }}
                             </div>
                         </div>
                     </div>
                 </div>
-            <div class="ui submit button">Create Account</div>
-        </div>
+            {{ Form::submit('Create Account', array('class' => 'ui submit button buttoncolor')) }}
+        {{ Form::close() }}
     </div>
 </div>
 @stop
@@ -137,6 +108,10 @@
     <style type="text/css">
         .hide {
             display: none;
+        }
+        .buttoncolor {
+            color: #78b638 !important;
+            border-color: #78b638 !important;
         }
     </style>
 @append

@@ -20,5 +20,7 @@ Route::controller('membership', 'User\MembershipController');
 Route::controller('schedule', 'User\ScheduleController');
 Route::controller('trainers', 'User\TrainersController');
 Route::controller('home', 'User\HomeController');
-Route::controller('login', 'User\LoginController');
+Route::get('login', 'User\LoginController@getIndex');
+Route::post('register', 'User\LoginController@postRegister');
+
 Route::controller('/', 'User\HomeController');
