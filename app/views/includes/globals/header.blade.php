@@ -25,6 +25,7 @@
 </div>
 </div>
 <div class="ui inverted menu">
+    <div class="greencolor">
   <a href="/home" class="item">
     <i></i> Home
   </a>
@@ -43,13 +44,11 @@
   <a href="/schedule" class="item">
     <i></i> Schedule
   </a>
-  <a href="/locate" class="item">
-    <i></i> Locate
-  </a>
   <a href="/login" class="item">
     <i></i> Login
   </a>
   <a href="/admin" class="item">
     <i></i>Admin
   </a>
+  </div>
 </div>

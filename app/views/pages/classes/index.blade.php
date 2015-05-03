@@ -13,14 +13,20 @@
 </div>--}}
 
 
-<div class="six wide column">
+<div class="four wide column">
     <div class="ui vertical menu">
-        <a class="active item" href="/classes">Classes</a>
-        <a class="item" href="/classes/crossfit">Crossfit</a>
-        <a class="item" href="/classes/pilates">Pilates</a>
-        <a class="item" href="/classes/zumba">Zumba</a>
-        <a class="item" href="/classes/cycling">Cycling</a>
-        <a class="item" href="/classes/yoga">Yoga</a>
+        <a class="active item" href="/classes" style="color: #78b638 !important;">Classes</a>
+        <a class="item" href="/classes/crossfit" style="color: #78b638 !important;">Crossfit</a>
+        <a class="item" href="/classes/pilates" style="color: #78b638 !important;">Pilates</a>
+        <a class="item" href="/classes/zumba" style="color: #78b638 !important;">Zumba</a>
+        <a class="item" href="/classes/cycling" style="color: #78b638 !important;">Cycling</a>
+        <a class="item" href="/classes/yoga" style="color: #78b638 !important;">Yoga</a>
+    </div>
+</div>
+
+<div class="twelve wide column">
+    <div class="ui segment">
+        <p>This is the segment</p>
     </div>
 </div>
 
