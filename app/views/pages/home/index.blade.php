@@ -50,7 +50,7 @@
         committed individual regardless of experience. We’ve used our same routines for elderly individuals with heart disease and cage fighters one month out from televised
         bouts. We scale load and intensity; we don’t change programs.
         <br>
-        <a class="tiny ui button" style="float: right" href="/classes">
+        <a class="tiny ui button" style="float: right; color: #78b638" href="/classes/crossfit">
             Crossfit Classes
         </a>
         </div>
@@ -59,14 +59,14 @@
         The nature of the Pilates allows for decompression of the spine as well as stretching and strengthening of the body, resulting in a sculpted physique and enhanced well-being of the body
         and mind. Pilates is physiologically efficient as it is full body focused, coupled with the use of the breath and optimized activation of the inner muscles of the body's core.
         <br>
-        <a class="tiny ui button" style="float: right" href="/classes">
+        <a class="tiny ui button" style="float: right; color: #78b638" href="/classes/pilates">
             Pilates Classes
         </a>
         </div>
 
         <div class="ui bottom attached tab segment" data-tab="zumba">Information for Zumba
         <br>
-        <a class="tiny ui button" style="float: right" href="/classes">
+        <a class="tiny ui button" style="float: right; color: #78b638" href="/classes/zumba">
             Zumba Classes
         </a>
         </div>
@@ -75,14 +75,14 @@
         In our authentic and athletic cycling class, motivating instructors and up-tempo music keep you energized as you sweat
         through grueling hill climbs, flat terrain, head winds, tail winds and anaerobic intervals.
         <br>
-        <a class="tiny ui button" style="float: right" href="/classes">
+        <a class="tiny ui button" style="float: right; color: #78b638" href="/classes/cycling">
             Cycling Classes
         </a>
         </div>
 
         <div class="ui bottom attached tab segment" data-tab="yoga">Information for Yoga
         <br>
-        <a class="tiny ui button" style="float: right" href="/classes">
+        <a class="tiny ui button" style="float: right; color: #78b638" href="/classes/yoga">
             Yoga Classes
         </a>
         </div>

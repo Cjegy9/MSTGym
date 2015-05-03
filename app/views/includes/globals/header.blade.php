@@ -49,4 +49,7 @@
   <a href="/login" class="item">
     <i></i> Login
   </a>
+  <a href="/admin" class="item">
+    <i></i>Admin
+  </a>
 </div>
