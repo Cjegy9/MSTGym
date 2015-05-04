@@ -93,14 +93,15 @@
     <script type="text/javascript">
         $(document).on('change', "#mem_level", function(){
             var changedVal = $(this).val();
-            if(changedVal == ""){
+            console.log(changedVal);
+            if(changedVal == "0"){
                 $("#payment_header").addClass('hide');
                 $("#payment_fields").addClass('hide');
             } else {
                 $("#payment_header").removeClass('hide');
                 $("#payment_fields").removeClass('hide');
             }
-        })
+        });
     </script>
 @append
 
@@ -111,7 +112,6 @@
         }
         .buttoncolor {
             color: #78b638 !important;
-            border-color: #78b638 !important;
         }
     </style>
 @append

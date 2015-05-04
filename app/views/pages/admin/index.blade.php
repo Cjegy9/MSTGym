@@ -5,6 +5,7 @@
         <a class="item" data-tab="emp_sch" style="color:#78b638">Schedule Employees</a>
         <a class="item" data-tab="add_emp" style="color:#78b638">Add Employee</a>
         <a class="item" data-tab="remove_emp" style="color:#78b638">Remove Employee</a>
+        <a class="item" data-tab="remove_member" style="color: #78b638">Remove Member</a>
     </div>
     <div class="ui bottom attached active tab segment" data-tab="schedule">
         {{ Form::open(array('url' => 'class/schedule', 'class' => 'ui form')) }}
@@ -98,6 +99,22 @@
         {{ Form::close() }}
     </div>
 
+    <div class="ui bottom attached tab segment" data-tab="remove_member">
+        {{ Form::open(array('url' => 'member/remove', 'class' => 'ui form')) }}
+            <div class="fields">
+                <div class="four wide field">
+                    <input type="text" placeholder="First Name" name="first_name">
+                </div>
+                <div class="four wide field">
+                    <input type="text" placeholder="Last Name" name="last_name">
+                </div>
+                <div class="one wide field">
+                    {{ Form::submit('-', array('class' => 'ui button buttoncolor')) }}
+                </div>
+            </div>
+        {{ Form::close() }}
+    </div>
+
 </div>
 
 @stop
@@ -115,7 +132,6 @@
         }
         .buttoncolor {
             color: #78b638 !important;
-            border-color: #78b638 !important;
         }
     </style>
 @append
