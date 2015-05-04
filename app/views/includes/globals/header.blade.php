@@ -50,5 +50,8 @@
   <a href="/admin" class="item">
     <i></i>Admin
   </a>
+  <a href="/contact" class="item">
+    <i></i>Contact Us
+  </a>
   </div>
 </div>

@@ -2,7 +2,7 @@
 
 use Illuminate\View\Factory as View;
 
-class LocateController extends \BaseController {
+class ContactController extends \BaseController {
 
     protected $layout = 'layouts.index';
 
@@ -16,6 +16,6 @@ class LocateController extends \BaseController {
 
     public function getIndex()
     {
-        $this->layout->content = $this->view->make('pages.locate.index');
+        $this->layout->content = $this->view->make('pages.contact.index');
     }
 }

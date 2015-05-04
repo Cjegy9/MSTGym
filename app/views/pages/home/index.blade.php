@@ -64,7 +64,9 @@
         </a>
         </div>
 
-        <div class="ui bottom attached tab segment" data-tab="zumba">Information for Zumba
+        <div class="ui bottom attached tab segment" data-tab="zumba">Zumba is a fitness program that combines Latin and international music with dance moves. Zumba routines incorporate interval training —
+        alternating fast and slow rhythms — and resistance training. Aerobic exercise reduces health risks, keeps excess pounds at bay, strengthens your heart and boosts your mood. If you enjoy Zumba,
+        you're also more likely to do it regularly — and experience its benefits as an aerobic exercise.
         <br>
         <a class="tiny ui button" style="float: right; color: #78b638" href="/classes/zumba">
             Zumba Classes
@@ -80,7 +82,8 @@
         </a>
         </div>
 
-        <div class="ui bottom attached tab segment" data-tab="yoga">Information for Yoga
+        <div class="ui bottom attached tab segment" data-tab="yoga">Designed to enhance vitality and a sense of well-being, our yoga classes use gentle movements to improve flexibility, balance, strength
+        and posture. The class may incorporate basic poses from various yoga styles.
         <br>
         <a class="tiny ui button" style="float: right; color: #78b638" href="/classes/yoga">
             Yoga Classes
@@ -94,21 +97,41 @@
               <div class="column">
                 <div class="ui horizontal segment">
                   <p style="color:#78b638; text-align: center">
-                  Silver Membership
-                  <ul class="ul list">
-                    <li></li>
-                  </ul>
+                    Silver Membership
+                    <ul class="ul list">
+                     <li>Access to Weight and Cardio Equipment</li>
+                     <li>2 Classes Per Week</li>
+                     <li>Receive Monthly Newsletter </li>
+                    </ul>
                   </p>
                 </div>
               </div>
               <div class="column">
                 <div class="ui horizontal segment">
-                  <p style="color:#78b638; text-align: center">Gold Membership</p>
+                  <p style="color:#78b638; text-align: center">
+                    Gold Membership
+                    <ul class="ul list">
+                        <li>Access to Weight and Cardio Equipment</li>
+                        <li>Access to Pool and Spa</li>
+                        <li>4 Classes Per Week</li>
+                        <li>10% Discount on Gym Apparel</li>
+                        <li>Receive Monthly Newsletter</li>
+                    </ul>
+                  </p>
+
                 </div>
               </div>
               <div class="column">
                 <div class="ui horizontal segment">
-                  <p style="color:#78b638; text-align: center">Platinum Membership</p>
+                  <p style="color:#78b638; text-align: center">
+                    Platinum Membership
+                    <ul class="ul list">
+                        <li>Access To All Facilites</li>
+                        <li>Unlimited Classes Per Week</li>
+                        <li>25% Discount on Gym Apparel</li>
+                        <li>Receive Monthly Newsletter</li>
+                    </ul>
+                  </p>
                 </div>
               </div>
             </div>

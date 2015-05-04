@@ -1,10 +1,10 @@
 @section('content')
 <div class="sixteen wide column">
-    <div class=" ui top attached tabular menu">
-        <a class="active item" data-tab="schedule">Schedule Classes</a>
-        <a class="item" data-tab="emp_sch">Schedule Employees</a>
-        <a class="item" data-tab="add_emp">Add Employee</a>
-        <a class="item" data-tab="remove_emp">Remove Employee</a>
+    <div class=" ui top attached tabular menu" style="border-color: #78b638">
+        <a class="active item" data-tab="schedule" style="color:#78b638">Schedule Classes</a>
+        <a class="item" data-tab="emp_sch" style="color:#78b638">Schedule Employees</a>
+        <a class="item" data-tab="add_emp" style="color:#78b638">Add Employee</a>
+        <a class="item" data-tab="remove_emp" style="color:#78b638">Remove Employee</a>
     </div>
     <div class="ui bottom attached active tab segment" data-tab="schedule">
         {{ Form::open(array('url' => 'class/schedule', 'class' => 'ui form')) }}
