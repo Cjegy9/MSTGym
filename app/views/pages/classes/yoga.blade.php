@@ -49,26 +49,7 @@
 
 @stop
 
-@section('inline-js')
-    <script type="text/javascript">
-    $(document).ready(function() {
-    // page is now ready, initialize the calendar...
-    $('#calendar').fullCalendar({
-        events: [
-            {
-                title : 'Zumba 6:00 - 7:00',
-                start : '2015-05-02',
-                allDay : true
-            }
-        ]
-        })
-
-
-    });
-
-    </script>
-
-@append
+@include('includes.globals.classes_js')
 
 @section('inline-css')
     <style type="text/css">

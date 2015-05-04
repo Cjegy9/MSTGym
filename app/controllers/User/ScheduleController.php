@@ -1,5 +1,6 @@
 <?php namespace User;
 
+use MSTGym\Objects\Schedule;
 use Illuminate\View\Factory as View;
 
 class ScheduleController extends \BaseController {
@@ -16,6 +17,9 @@ class ScheduleController extends \BaseController {
 
     public function getIndex()
     {
-        $this->layout->content = $this->view->make('pages.schedule.index');
+        $schedule = Schedule::with('Employee')->get();
+
+        $this->layout->content = $this->view->make('pages.schedule.index')
+                                        ->with('schedule', $schedule);
     }
 }

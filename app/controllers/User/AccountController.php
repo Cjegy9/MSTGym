@@ -7,6 +7,7 @@ use Illuminate\View\Factory as View;
 use Illuminate\Http\Request as Request;
 use Illuminate\Support\Facades\Input as Input;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Routing\Redirector as Redirect;
 
 class AccountController extends \BaseController {
 
@@ -18,19 +19,38 @@ class AccountController extends \BaseController {
 
     private $request;
 
-    public function __construct(View $view, UserHelper $user_helper, Request $request)
+    private $redirect;
+
+    public function __construct(View $view, UserHelper $user_helper, Request $request, Redirect $redirect)
     {
         parent::__construct();
         $this->view = $view;
         $this->user_helper = $user_helper;
         $this->request = $request;
+        $this->redirect = $redirect;
+    }
+
+    public function getLogout()
+    {
+        \Auth::logout();
+
+        return $this->redirect->to('/');
     }
 
     public function getIndex()
     {
-        $this->layout->content = $this->view->make('pages.account.index')
-                                    ->with('mem_level_dropdown', $this->user_helper->memLevelDropdown())
-                                    ->with('card_type_dropdown', $this->user_helper->cardTypeDropdown());
+        if(!\Auth::check())
+        {
+            $this->layout->content = $this->view->make('pages.account.index')
+                ->with('mem_level_dropdown', $this->user_helper->memLevelDropdown())
+                ->with('card_type_dropdown', $this->user_helper->cardTypeDropdown());
+        }
+        else
+        {
+            $this->layout->content = $this->view->make('')
+                                        ->with('user', \Auth::user());
+        }
+
     }
 
     public function postLogin()
@@ -55,7 +75,11 @@ class AccountController extends \BaseController {
     {
         $user = new User();
         $user->fill($this->request->except('_token'));
+        $user->password = \Hash::make($user->password);
         $user->admin = 1;
         $user->createUser();
+        $user->save();
+
+        return $this->redirect('/');
     }
 }

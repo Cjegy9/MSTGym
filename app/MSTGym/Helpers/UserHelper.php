@@ -29,6 +29,15 @@ class UserHelper {
         9 => 'Chris Edwards - Manager'
     );
 
+    private $class_types = array(
+        0 => 'Any',
+        1 => 'Crossfit',
+        2 => 'Pilates',
+        3 => 'Zumba',
+        4 => 'Cycling',
+        5 => 'Yoga'
+    );
+
     public function memLevelDropdown()
     {
         return $this->mem_level;
@@ -44,4 +53,19 @@ class UserHelper {
         return $this->employee;
     }
 
+    public function realignToDropdown($object)
+    {
+        $return_array = array();
+        foreach ($object as $object)
+        {
+            $return_array[$object->id] = $object->first_name . " " . $object->last_name;
+        }
+
+        return $return_array;
+    }
+
+    public function classTypesDropdown()
+    {
+        return $this->class_types;
+    }
 }

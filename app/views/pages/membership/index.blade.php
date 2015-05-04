@@ -1,6 +1,5 @@
 @section('content')
 <div class="sixteen wide column">
-
     <div class="ui segment">
         <h4 style="color: #78b638">Why Get A Gym Membership</h4>
         <p>

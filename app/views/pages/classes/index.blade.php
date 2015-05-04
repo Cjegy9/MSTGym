@@ -24,35 +24,75 @@
 
         </p>
     </div>
+    <div class='ui segment'>
+        <h4 style="color: #78b638">Search Classes</h4>
+        <div class="ui divider"></div>
+        <div class="ui form">
+            <div class="field">
+                {{ Form::text('class_name', '', array('placeholder' => 'Class Name', 'id' => 'class_name')) }}
+            </div>
+            <div class="field">
+                {{ Form::select('class_type', $class_types, '', array('id' => 'type_dropdown')) }}
+            </div>
+            <div class="field">
+                {{ Form::select('employee', $employees, '', array('id' => 'employee_dropdown')) }}
+            </div>
+            <div class="field">
+                <button class="ui button buttoncolor" id="class_search">Search</button>
+            </div>
+            <div class="hidden" id="search_results">
+                <div class="ui divider"></div>
+                <div class="ui list" id="results_list">
+
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="ui segment">
         <h4 style="color: #78b638">All Classes Schedule</h4>
         <div id="calendar"></div>
     </div>
 </div>
 
-
-
-
-
 @stop
 
 @section('inline-js')
     <script type="text/javascript">
-    $(document).ready(function() {
-    // page is now ready, initialize the calendar...
-    $('#calendar').fullCalendar({
-        events: [
-            {
-                title : 'Zumba 6:00 - 7:00',
-                start : '2015-05-02',
-                allDay : true
-            }
-        ]
-        })
+        $("#class_search").on("click", function()
+        {
+            var params = {
+                'name' : $("#class_name").val(),
+                'class_type' : $("#type_dropdown").val(),
+                'employee' : $("#employee_dropdown").val()
+            };
 
+            $.ajax({
+                type : "POST",
+                data : params,
+                url : "{{ action('User\ClassesController@postSearch') }}",
+                success : function(data) {
+                    if(data.count > 0) {
+                        var result_list = "";
+                        for (i = 0; i < data.count; i++) {
+                            result_list += '<div class="item">';
+                            result_list += '<div class="header">' + data.results[i]['name'] + '</div>';
+                            result_list += '<strong>Capacity: </strong>' + data.results[i]['capacity'];
+                            result_list += ' <strong>Start: </strong>' + data.results[i]['start'];
+                            result_list += ' <strong>End: </strong>' + data.results[i]['end'];
+                            result_list += ' <strong>Trainer: </strong>' + data.results[i]['employee']['first_name'];
+                            result_list += '</div>'
+                        }
 
-    });
-
+                        $("#results_list").html(result_list);
+                        $("#search_results").removeClass('hidden');
+                    } else {
+                        $("#search_results").removeClass('hidden');
+                        $("#search_results").append('<div class="ui blue message">Sorry! We could not find any results for your search</div>')
+                    }
+                }
+            });
+        });
     </script>
-
 @append
+
+@include('includes.globals.classes_js')
