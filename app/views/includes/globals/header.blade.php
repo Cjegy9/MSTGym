@@ -5,23 +5,23 @@
 
 </div>
 <div class="eight wide column" style="vertical-align: bottom">
-<form class="ui form" style="vertical-align: bottom;">
-            <div class="three fields">
-                <div class="required field" style="float: right; padding-right: 0px; margin-bottom: 0px;">
-                    <div class="ui icon input">
-                        <input type="password" placeholder="Password">
-                    </div>
+    {{ Form::open(array('url' => action('User\LoginController@postLogin'), 'class' => 'ui form')) }}
+        <div class="three fields">
+            <div class="required field" style="float: right; padding-right: 0px; margin-bottom: 0px;">
+                <div class="ui icon input">
+                    {{ Form::password('password', array('placeholder' => 'password')) }}
                 </div>
-                <div class="required field" style="float: right; margin-bottom: 0px;">
-                    <div class="ui icon input">
-                        <input type="text" placeholder="Username">
-                    </div>
+            </div>
+            <div class="required field" style="float: right; margin-bottom: 0px;">
+                <div class="ui icon input">
+                    {{ Form::text('username', '', array('placeholder' => 'Username')) }}
                 </div>
-                <div class="required field" style="text-align: right;">
-            <div class="ui submit button">Login</div>
             </div>
+            <div class="required field" style="text-align: right;">
+                {{ Form::submit('Login', array('class' => 'ui submit button')) }}
             </div>
-        </form>
+        </div>
+    {{ Form::close() }}
 </div>
 </div>
 <div class="ui inverted menu">
