@@ -48,10 +48,6 @@
             </div>
         </div>
     </div>
-    <div class="ui segment">
-        <h4 style="color: #78b638">All Classes Schedule</h4>
-        <div id="calendar"></div>
-    </div>
 </div>
 
 @stop
@@ -77,8 +73,8 @@
                             result_list += '<div class="item">';
                             result_list += '<div class="header">' + data.results[i]['name'] + '</div>';
                             result_list += '<strong>Capacity: </strong>' + data.results[i]['capacity'];
-                            result_list += ' <strong>Start: </strong>' + data.results[i]['start'];
-                            result_list += ' <strong>End: </strong>' + data.results[i]['end'];
+                            result_list += ' <strong>Start Time: </strong>' + data.results[i]['start'];
+                            result_list += ' <strong>End Time: </strong>' + data.results[i]['end'];
                             result_list += ' <strong>Trainer: </strong>' + data.results[i]['employee']['first_name'];
                             result_list += '</div>'
                         }
@@ -95,4 +91,3 @@
     </script>
 @append
 
-@include('includes.globals.classes_js')

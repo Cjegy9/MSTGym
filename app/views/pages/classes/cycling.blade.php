@@ -19,10 +19,7 @@
             </p>
 
         </div>
-        <div class="ui segment">
-            <h4 style="color: #78b638">Cycling Schedule</h4>
-            <div id='calendar'></div>
-        </div>
+
         <div class="ui segment">
             <h4 class="ui dividing header" style="color: #78b638">Join A Cycling Class</h4>
             {{ Form::open(array('url' => 'cycling/signup', '', 'class' => 'ui form')) }}
@@ -44,6 +41,12 @@
         </div>
     </div>
 
+    <div class="sixteen wide column">
+        <div class="ui segment">
+                    <h4 style="color: #78b638">Cycling Schedule</h4>
+                    <div id='calendar'></div>
+                </div>
+    </div>
 
 
 

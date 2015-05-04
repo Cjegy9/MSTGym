@@ -31,7 +31,7 @@
                     <input type="date" name="day" placeholder="Date">
                 </div>
                 <div class="four wide field">
-                    {{ Form::select('class_type', $class_types, "", array('class' => 'ui dropdown', 'id' => 'class_types')) }}
+                    {{ Form::select('class_type', $class_types, '', array('class' => 'ui dropdown', 'id' => 'class_types')) }}
                 </div>
                 <div class="four wide field">
                     {{ Form::submit('Schedule Class', array('class' => 'ui submit button buttoncolor')) }}

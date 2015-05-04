@@ -20,29 +20,32 @@
 
         </div>
         <div class="ui segment">
+                    <h4 class="ui dividing header" style="color: #78b638">Join A Zumba Class</h4>
+                    {{ Form::open(array('url' => 'zumba/signup', '', 'class' => 'ui form')) }}
+                    <div class="fields">
+                        <div class="four wide field">
+                            <input type="date" name="class_date" >
+                        </div>
+                        <div class="three wide field">
+                            <input type="number" name="class_start" placeholder="Start Time">
+                        </div>
+                        <div class="three wide field">
+                            <input type="number" name="class_end" placeholder="End Time">
+                        </div>
+                        <div class="one wide field">
+                            {{ Form::submit('+', array('class' => 'ui submit button buttoncolor')) }}
+                        </div>
+                    </div>
+                    {{ Form::close() }}
+                </div>
+        </div>
+        <div class="sixteen wide column">
+        <div class="ui segment">
             <h4 style="color: #78b638">Zumba Schedule</h4>
             <div id='calendar'></div>
         </div>
-        <div class="ui segment">
-            <h4 class="ui dividing header" style="color: #78b638">Join A Zumba Class</h4>
-            {{ Form::open(array('url' => 'zumba/signup', '', 'class' => 'ui form')) }}
-            <div class="fields">
-                <div class="four wide field">
-                    <input type="date" name="class_date" >
-                </div>
-                <div class="three wide field">
-                    <input type="number" name="class_start" placeholder="Start Time">
-                </div>
-                <div class="three wide field">
-                    <input type="number" name="class_end" placeholder="End Time">
-                </div>
-                <div class="one wide field">
-                    {{ Form::submit('+', array('class' => 'ui submit button buttoncolor')) }}
-                </div>
-            </div>
-            {{ Form::close() }}
         </div>
-    </div>
+
 
 
 
@@ -50,8 +53,23 @@
 
 @stop
 
-@include('includes.globals.classes_js')
-
+@section('inline-js')
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // page is now ready, initialize the calendar...
+            $('#calendar').fullCalendar({
+                events: [
+                    @foreach($classes as $class)
+                        {
+                            title : "{{ $class->name . " " . $class->start . "-" . $class->end }}",
+                            start : "{{ $class->day }}"
+                        }
+                    @endforeach
+                ]
+            })
+        });
+    </script>
+@append
 @section('inline-css')
     <style type="text/css">
         .buttoncolor {

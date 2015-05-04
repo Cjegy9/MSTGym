@@ -22,6 +22,7 @@ Route::controller('contact', 'User\ContactController');
 
 Route::post('login', 'User\AccountController@postLogin');
 Route::get('account', 'User\AccountController@getIndex');
+
 Route::post('register', 'User\AccountController@postRegister');
 
 // Admin

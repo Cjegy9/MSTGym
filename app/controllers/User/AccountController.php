@@ -47,7 +47,7 @@ class AccountController extends \BaseController {
         }
         else
         {
-            $this->layout->content = $this->view->make('')
+            $this->layout->content = $this->view->make('pages.account.account_info')
                                         ->with('user', \Auth::user());
         }
 
@@ -76,10 +76,9 @@ class AccountController extends \BaseController {
         $user = new User();
         $user->fill($this->request->except('_token'));
         $user->password = \Hash::make($user->password);
-        $user->admin = 1;
         $user->createUser();
         $user->save();
 
-        return $this->redirect('/');
+        return $this->redirect->to('/');
     }
 }

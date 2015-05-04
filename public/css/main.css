@@ -39,3 +39,11 @@
 .hidden {
     display: none;
 }
+
+.indent {
+    text-indent: 50px !important;
+}
+
+.botmarg {
+    margin-bottom: 5px !important;
+}

@@ -9,7 +9,7 @@ class GymClass extends \Eloquent {
 
     protected $guarded = array('id');
 
-    protected $fillable = array('name', 'capacity', 'employee_id', 'start', 'end', 'day');
+    protected $fillable = array('name', 'capacity', 'employee_id', 'start', 'end', 'day', 'class_type');
 
     public function Employee()
     {
@@ -19,7 +19,7 @@ class GymClass extends \Eloquent {
     public function getClassTypeAttribute($value)
     {
         $class_types = array(
-            0 => 'None',
+            0 => 'Any',
             1 => 'Crossfit',
             2 => 'Pilates',
             3 => 'Zumba',

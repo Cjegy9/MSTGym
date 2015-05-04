@@ -1,26 +1,4 @@
 @section('content')
-
-    {{--<div class="sixteen wide column">
-        <div class="slider-wrapper">
-            <div id="slider" class="lean-slider">
-                <div class="slide1 lean-slider-slide">
-                                    <img src="images/yoga-studio.png" alt=""/>
-                                </div>
-                <div class="slide2 lean-slider-slide">
-                    <img src="{{ asset('images/crossfit.png') }}" alt=""/>
-                </div>
-                <div class="slide3 lean-slider-slide">
-                    <img src="{{ asset('images/pool.png') }}"height="350px" alt=""/>
-                </div>
-                <div class="slide4 lean-slider-slide">
-                    <img src="{{ asset('images/cycle-studio.png') }}" height="350px" alt=""/>
-                </div>
-                <div class="slide5 lean-slider-slide">
-                    <img src="images/yoga-studio.png" height="350px" alt=""/>
-                </div>
-            </div>
-        </div>
-    </div>--}}
     <div class="sixteen wide column">
         <div class="ui segment">
             <p>
