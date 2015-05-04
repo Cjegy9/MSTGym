@@ -1,8 +1,8 @@
 @section('content')
 <div class="sixteen wide column">
     <div class="ui segment">
+        <h4 class="ui dividing header" style="color: #78b638">Create Account</h4>
         {{ Form::open(array('url' => 'register', 'class' => 'ui form')) }}
-            <h4 class="ui dividing header" style="color: #78b638">Create Account</h4>
             <div class="fields">
                 <div class="ten wide field">
                     {{ Form::label('last_name', 'Name') }}
