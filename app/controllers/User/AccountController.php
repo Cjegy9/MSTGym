@@ -8,7 +8,7 @@ use Illuminate\Http\Request as Request;
 use Illuminate\Support\Facades\Input as Input;
 use Illuminate\Support\Facades\Session;
 
-class LoginController extends \BaseController {
+class AccountController extends \BaseController {
 
     protected $layout = 'layouts.index';
 
@@ -28,7 +28,7 @@ class LoginController extends \BaseController {
 
     public function getIndex()
     {
-        $this->layout->content = $this->view->make('pages.login.index')
+        $this->layout->content = $this->view->make('pages.account.index')
                                     ->with('mem_level_dropdown', $this->user_helper->memLevelDropdown())
                                     ->with('card_type_dropdown', $this->user_helper->cardTypeDropdown());
     }

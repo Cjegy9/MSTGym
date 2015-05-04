@@ -38,14 +38,11 @@
   <a href="/facilities" class="item">
     <i></i> Facilities
   </a>
-  <a href="/trainers" class="item">
-    <i></i> Trainers
-  </a>
   <a href="/schedule" class="item">
     <i></i> Schedule
   </a>
-  <a href="/login" class="item">
-    <i></i> Login
+  <a href="/account" class="item">
+    <i></i> Account
   </a>
   <a href="/admin" class="item">
     <i></i>Admin

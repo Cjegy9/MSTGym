@@ -3,10 +3,10 @@
 class UserHelper {
 
     private $mem_level = array(
-        0 => 'No Membership',
-        1 => 'Silver',
-        2 => 'Gold',
-        3 => 'Platinum'
+        0 => '',
+        1 => 'Silver - $20',
+        2 => 'Gold - $40',
+        3 => 'Platinum - $60'
     );
 
     private $card_type = array(

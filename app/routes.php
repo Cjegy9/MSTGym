@@ -17,13 +17,12 @@ Route::controller('classes', 'User\ClassesController');
 Route::controller('facilities', 'User\FacilitiesController');
 Route::controller('membership', 'User\MembershipController');
 Route::controller('schedule', 'User\ScheduleController');
-Route::controller('trainers', 'User\TrainersController');
 Route::controller('admin', 'User\AdminController');
 Route::controller('home', 'User\HomeController');
 Route::controller('contact', 'User\ContactController');
-
 Route::get('login', 'User\LoginController@getIndex');
 Route::post('login', 'User\LoginController@postLogin');
+Route::get('account', 'User\AccountController@getIndex');
 Route::post('register', 'User\LoginController@postRegister');
 
 Route::controller('/', 'User\HomeController');

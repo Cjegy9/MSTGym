@@ -100,7 +100,7 @@
                     Silver Membership
                     <ul class="ul list">
                      <li>Access to Weight and Cardio Equipment</li>
-                     <li>2 Classes Per Week</li>
+                     <li>1 Classes Per Week</li>
                      <li>Receive Monthly Newsletter </li>
                     </ul>
                   </p>
