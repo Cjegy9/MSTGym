@@ -21,16 +21,10 @@
         </div>
         <div class="ui segment">
             <h4 class="ui dividing header" style="color: #78b638">Join A Crossfit Class</h4>
-            {{ Form::open(array('url' => 'crossfit/signup', '', 'class' => 'ui form')) }}
+            {{ Form::open(array('url' => action('User\ClassesController@classSignUp', 'crossfit'), '', 'class' => 'ui form')) }}
             <div class="fields">
-                <div class="four wide field">
-                    <input type="date" name="class_date" >
-                </div>
-                <div class="three wide field">
-                    <input type="number" name="class_start" placeholder="Start Time">
-                </div>
-                <div class="three wide field">
-                    <input type="number" name="class_end" placeholder="End Time">
+                <div class="eleven wide field">
+                    {{ Form::select('class', $classes_dropdown, '', array('id' => 'ui dropdown')) }}
                 </div>
                 <div class="one wide field">
                     {{ Form::submit('+', array('class' => 'ui submit button buttoncolor')) }}

@@ -1,10 +1,12 @@
 <?php namespace User;
 
 use MSTGym\Objects\GymClass;
+use MSTGym\Objects\Roster;
 use MSTGym\Helpers\UserHelper;
 use MSTGym\Objects\Employee;
 use Illuminate\View\Factory as View;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector as Redirect;
 
 class ClassesController extends \BaseController {
 
@@ -16,12 +18,13 @@ class ClassesController extends \BaseController {
 
     private $request;
 
-    public function __construct(View $view, UserHelper $user_helper, Request $request)
+    public function __construct(View $view, UserHelper $user_helper, Request $request, Redirect $redirect)
     {
         parent::__construct();
         $this->view = $view;
         $this->user_helper = $user_helper;
         $this->request = $request;
+        $this->redirect = $redirect;
     }
 
     public function getIndex()
@@ -38,32 +41,52 @@ class ClassesController extends \BaseController {
 
     public function getCrossfit()
     {
+        $classes = GymClass::where('class_type', 1)->get();
+        $classes_dropdown = $this->user_helper->realignClassToDropdown($classes);
+
         $this->layout->content = $this->view->make('pages.classes.crossfit')
-            ->with('classes', GymClass::where('class_type', 1)->get());
+            ->with('classes', $classes)
+            ->with('classes_dropdown', $classes_dropdown);
     }
 
     public function getPilates()
     {
+        $classes = GymClass::where('class_type', 2)->get();
+        $classes_dropdown = $this->user_helper->realignClassToDropdown($classes);
+
         $this->layout->content = $this->view->make('pages.classes.pilates')
-            ->with('classes', GymClass::where('class_type', 2)->get());
+            ->with('classes', $classes)
+            ->with('classes_dropdown', $classes_dropdown);
     }
 
     public function getZumba()
     {
+        $classes = GymClass::where('class_type', 3)->get();
+        $classes_dropdown = $this->user_helper->realignClassToDropdown($classes);
+
         $this->layout->content = $this->view->make('pages.classes.zumba')
-            ->with('classes', GymClass::where('class_type', 3)->get());
+            ->with('classes', $classes)
+            ->with('classes_dropdown', $classes_dropdown);
     }
 
     public function getCycling()
     {
+        $classes = GymClass::where('class_type', 4)->get();
+        $classes_dropdown = $this->user_helper->realignClassToDropdown($classes);
+
         $this->layout->content = $this->view->make('pages.classes.cycling')
-            ->with('classes', GymClass::where('class_type', 4)->get());
+            ->with('classes', $classes)
+            ->with('classes_dropdown', $classes_dropdown);
     }
 
     public function getYoga()
     {
+        $classes = GymClass::where('class_type', 5)->get();
+        $classes_dropdown = $this->user_helper->realignClassToDropdown($classes);
+
         $this->layout->content = $this->view->make('pages.classes.yoga')
-            ->with('classes', GymClass::where('class_type', 5)->get());
+            ->with('classes', $classes)
+            ->with('classes_dropdown', $classes_dropdown);
     }
 
     public function postSearch()
@@ -96,4 +119,17 @@ class ClassesController extends \BaseController {
         return \Response::json($final_results);
     }
 
+    public function classSignUp($class_submit)
+    {
+        $class = GymClass::where('id', $this->request->get('class'))->first();
+        $class->capacity--;
+        $class->save();
+
+        $roster = new Roster();
+        $roster->member_id = \Auth::user()->id;
+        $roster->class_id = $class->id;
+        $roster->save();
+
+        return $this->redirect->to('classes/' . $class_submit);
+    }
 }

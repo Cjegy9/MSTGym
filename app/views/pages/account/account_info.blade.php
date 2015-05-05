@@ -11,6 +11,8 @@
                         <p class="indent botmarg">{{ $user->city }}, {{ $user->state }} {{ $user->zip_code }}<br></p>
                      <h5 class="buttoncolor indent botmarg">Email</h5>
                         <p class="indent botmarg">{{ $user->email }}</p>
+                     <h5 class="buttoncolor indent botmarg">Membership</h5>
+                        <p class="indent botmarg">{{ $user->membership }}</p>
                 </div>
             </div>
         </div>

@@ -20,4 +20,16 @@ class User extends \Eloquent implements UserInterface, RemindableInterface{
             "," . $this->attributes['state'] . "," . $this->attributes['zip_code'] . "," . $this->attributes['email'] . "," . $this->attributes['password'] . "," . $this->attributes['membership'] . "," . $this->attributes['admin'] .
             "," . $this->attributes['card_name'] . "," . $this->attributes['card_number'] . "," . $this->attributes['card_exp'] . "," . $this->attributes['card_type'] . ");");
     }
+
+    public function getMembershipAttribute($value)
+    {
+        $mem_level = array(
+            0 => '',
+            1 => 'Silver',
+            2 => 'Gold',
+            3 => 'Platinum'
+        );
+
+        return $mem_level[$value];
+    }
 }

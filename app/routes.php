@@ -34,6 +34,7 @@ Route::post('postClass', 'User\AdminController@postClass');
 Route::post('postSchedule', 'User\AdminController@postSchedule');
 
 Route::post('postSearch', 'User\ClassesController@postSearch');
+Route::post('classSignUp/{class}', 'User\ClassesController@classSignUp');
 
 Route::get('logout', 'User\AccountController@getLogout');
 

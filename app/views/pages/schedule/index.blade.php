@@ -14,21 +14,4 @@
 
 @stop
 
-@section('inline-js')
-    <script type="text/javascript">
-        $(document).ready(function() {
-            // page is now ready, initialize the calendar...
-            $('#calendar').fullCalendar({
-                events: [
-                    @foreach ($schedule as $event)
-                    {
-                        title : "{{ $event->employee->first_name . $event->employee->last_name . " " . $event->start . "-" . $event->end}}",
-                        start : "{{ $event->day }}"
-                    },
-                    @endforeach
-                ]
-            });
-        });
-    </script>
-
-@stop
+@include('includes.globals.classes_js')
