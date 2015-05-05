@@ -82,6 +82,7 @@ class AdminController extends \BaseController {
     {
         $schedule = new Schedule();
         $schedule->fill($this->request->except('_token'));
+
         $schedule->save();
 
         return $this->redirect->to('admin');

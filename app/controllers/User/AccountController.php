@@ -76,8 +76,8 @@ class AccountController extends \BaseController {
         $user = new User();
         $user->fill($this->request->except('_token'));
         $user->password = \Hash::make($user->password);
-        $user->createUser();
         $user->admin = 1;
+        $user->createUser();
         $user->save();
 
         return $this->redirect->to('/');

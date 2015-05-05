@@ -19,19 +19,22 @@
             </p>
 
         </div>
-        <div class="ui segment">
+
+        @if(\Auth::check())
+                <div class="ui segment">
                     <h4 class="ui dividing header" style="color: #78b638">Join A Zumba Class</h4>
-            {{ Form::open(array('url' => action('User\ClassesController@classSignUp', 'zumba'), '', 'class' => 'ui form')) }}
-            <div class="fields">
-                <div class="eleven wide field">
-                    {{ Form::select('class', $classes_dropdown, '', array('id' => 'ui dropdown')) }}
+                    {{ Form::open(array('url' => action('User\ClassesController@classSignUp', 'zumba'), '', 'class' => 'ui form')) }}
+                        <div class="fields">
+                            <div class="eleven wide field">
+                                {{ Form::select('class', $classes_dropdown, '', array('id' => 'ui dropdown')) }}
+                            </div>
+                            <div class="one wide field">
+                                {{ Form::submit('+', array('class' => 'ui submit button buttoncolor')) }}
+                            </div>
+                        </div>
+                    {{ Form::close() }}
                 </div>
-                <div class="one wide field">
-                    {{ Form::submit('+', array('class' => 'ui submit button buttoncolor')) }}
-                </div>
-            </div>
-            {{ Form::close() }}
-                </div>
+                @endif
         </div>
         <div class="sixteen wide column">
         <div class="ui segment">

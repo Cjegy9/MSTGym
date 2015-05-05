@@ -1,8 +1,11 @@
 @section('content')
     <div class="sixteen wide column">
         <div class="ui segment">
+            <h5 class="buttoncolor">About MST Gym</h5>
             <p>
-                This is the about segment.
+                MST Gym is a gym located in Rolla Missouri that has something for every person that wants to exercise. MST Gym has classes taught by expert trainers for people of all ages and
+                fitness level. The facilities are top of the line and provide members with the best possible equipment to be healthy. Every person has their own set of goals and their own unique perspective
+                of what a fitness center means to them. We at MST Gym are here to help our members achieve their goals.
             </p>
         </div>
     </div>
@@ -19,7 +22,8 @@
           to give you an effective wy to work out. Whether you're looking for the challenge of Crossfit classes, the fun of Zumba classes or the peace of Yoga classes, we have
           a group fitness class that suits your goals and your schedule. Each member will receive an amount of classes based on their membership.
         <br>
-            <a class="tiny ui button" style="float: right; color: #78b638" href="/classes">
+        <br>
+            <a class="tiny ui button" style="color: #78b638" href="/classes">
             View Available Classes
         </a>
         </div>
@@ -28,7 +32,8 @@
         committed individual regardless of experience. We’ve used our same routines for elderly individuals with heart disease and cage fighters one month out from televised
         bouts. We scale load and intensity; we don’t change programs.
         <br>
-        <a class="tiny ui button" style="float: right; color: #78b638" href="/classes/crossfit">
+        <br>
+        <a class="tiny ui button" style="color: #78b638" href="/classes/crossfit">
             Crossfit Classes
         </a>
         </div>
@@ -37,7 +42,8 @@
         The nature of the Pilates allows for decompression of the spine as well as stretching and strengthening of the body, resulting in a sculpted physique and enhanced well-being of the body
         and mind. Pilates is physiologically efficient as it is full body focused, coupled with the use of the breath and optimized activation of the inner muscles of the body's core.
         <br>
-        <a class="tiny ui button" style="float: right; color: #78b638" href="/classes/pilates">
+        <br>
+        <a class="tiny ui button" style="color: #78b638" href="/classes/pilates">
             Pilates Classes
         </a>
         </div>
@@ -46,7 +52,8 @@
         alternating fast and slow rhythms — and resistance training. Aerobic exercise reduces health risks, keeps excess pounds at bay, strengthens your heart and boosts your mood. If you enjoy Zumba,
         you're also more likely to do it regularly — and experience its benefits as an aerobic exercise.
         <br>
-        <a class="tiny ui button" style="float: right; color: #78b638" href="/classes/zumba">
+        <br>
+        <a class="tiny ui button" style="color: #78b638" href="/classes/zumba">
             Zumba Classes
         </a>
         </div>
@@ -55,7 +62,8 @@
         In our authentic and athletic cycling class, motivating instructors and up-tempo music keep you energized as you sweat
         through grueling hill climbs, flat terrain, head winds, tail winds and anaerobic intervals.
         <br>
-        <a class="tiny ui button" style="float: right; color: #78b638" href="/classes/cycling">
+        <br>
+        <a class="tiny ui button" style="color: #78b638" href="/classes/cycling">
             Cycling Classes
         </a>
         </div>
@@ -63,7 +71,8 @@
         <div class="ui bottom attached tab segment" data-tab="yoga">Designed to enhance vitality and a sense of well-being, our yoga classes use gentle movements to improve flexibility, balance, strength
         and posture. The class may incorporate basic poses from various yoga styles.
         <br>
-        <a class="tiny ui button" style="float: right; color: #78b638" href="/classes/yoga">
+        <br>
+        <a class="tiny ui button"style="color: #78b638" href="/classes/yoga">
             Yoga Classes
         </a>
         </div>
@@ -113,6 +122,18 @@
                 </div>
               </div>
             </div>
+            <a href="/membership" class="ui button buttoncolor">
+                View Memberships
+            </a>
+        </div>
+
+        <div class="ui segment">
+            <h5 class="buttoncolor">About Our Trainers</h5>
+            <p>
+                The trainers at MST Gym are there to help members perfect their routines and lead classes that make working out fun and exciting.
+                All trainers are experts in their craft and provide expert knowledge to members. The trainers at MST Gym are selfless and there to
+                help you with any thing you will need to be healthy and safe.
+            </p>
         </div>
     </div>
 @stop

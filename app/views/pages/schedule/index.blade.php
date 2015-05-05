@@ -14,4 +14,4 @@
 
 @stop
 
-@include('includes.globals.classes_js')
+@include('includes.globals.schedule_js')
