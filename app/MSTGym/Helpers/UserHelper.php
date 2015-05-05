@@ -18,15 +18,15 @@ class UserHelper {
 
     private $employee = array(
         0 => 'Employee',
-        1 => 'Brandon Thomas - Trainer',
+        1 => 'Brandon Thomas',
         2 => 'Danny White',
         3 => 'Rick Henning',
         4 => 'Zach Walters',
         5 => 'David Walsh',
         6 => 'Brittany Baxter',
         7 => 'Sharon Sullivan',
-        8 => 'Nora Burns - Manager',
-        9 => 'Chris Edwards - Manager'
+        8 => 'Nora Burns',
+        9 => 'Chris Edwards'
     );
 
     private $class_types = array(
@@ -59,6 +59,17 @@ class UserHelper {
         foreach ($object as $object)
         {
             $return_array[$object->id] = $object->first_name . " " . $object->last_name;
+        }
+
+        return $return_array;
+    }
+
+    public function realignClassToDropdown($classes)
+    {
+        $return_array = array();
+        foreach ($classes as $class)
+        {
+            $return_array[$class->id] = $class->name . " " . $class->day . " Capacity: " . $class->capacity;
         }
 
         return $return_array;

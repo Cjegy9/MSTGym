@@ -21,22 +21,16 @@
         </div>
         <div class="ui segment">
                     <h4 class="ui dividing header" style="color: #78b638">Join A Zumba Class</h4>
-                    {{ Form::open(array('url' => 'zumba/signup', '', 'class' => 'ui form')) }}
-                    <div class="fields">
-                        <div class="four wide field">
-                            <input type="date" name="class_date" >
-                        </div>
-                        <div class="three wide field">
-                            <input type="number" name="class_start" placeholder="Start Time">
-                        </div>
-                        <div class="three wide field">
-                            <input type="number" name="class_end" placeholder="End Time">
-                        </div>
-                        <div class="one wide field">
-                            {{ Form::submit('+', array('class' => 'ui submit button buttoncolor')) }}
-                        </div>
-                    </div>
-                    {{ Form::close() }}
+            {{ Form::open(array('url' => action('User\ClassesController@classSignUp', 'zumba'), '', 'class' => 'ui form')) }}
+            <div class="fields">
+                <div class="eleven wide field">
+                    {{ Form::select('class', $classes_dropdown, '', array('id' => 'ui dropdown')) }}
+                </div>
+                <div class="one wide field">
+                    {{ Form::submit('+', array('class' => 'ui submit button buttoncolor')) }}
+                </div>
+            </div>
+            {{ Form::close() }}
                 </div>
         </div>
         <div class="sixteen wide column">
@@ -53,23 +47,8 @@
 
 @stop
 
-@section('inline-js')
-    <script type="text/javascript">
-        $(document).ready(function() {
-            // page is now ready, initialize the calendar...
-            $('#calendar').fullCalendar({
-                events: [
-                    @foreach($classes as $class)
-                        {
-                            title : "{{ $class->name . " " . $class->start . "-" . $class->end }}",
-                            start : "{{ $class->day }}"
-                        }
-                    @endforeach
-                ]
-            })
-        });
-    </script>
-@append
+@include('includes.globals.classes_js')
+
 @section('inline-css')
     <style type="text/css">
         .buttoncolor {
