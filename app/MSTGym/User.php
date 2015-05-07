@@ -13,9 +13,7 @@ class User extends \Eloquent implements UserInterface, RemindableInterface{
 
     protected $fillable = array('first_name', 'last_name', 'middle_initial', 'd_o_b', 'street', 'city', 'state', 'zip_code', 'email', 'password', 'membership', 'admin', 'card_name', 'card_number', 'card_exp', 'card_type');
 
-    /*
-     *
-     *
+
      public function createUser()
     {
         \DB::raw("INSERT INTO users (first_name, last_name, middle_initial, d_o_b, street, city, state, zip_code, email, password, membership, admin, card_name, card_number, card_exp, card_type) VALUES
@@ -23,6 +21,7 @@ class User extends \Eloquent implements UserInterface, RemindableInterface{
             "," . $this->attributes['state'] . "," . $this->attributes['zip_code'] . "," . $this->attributes['email'] . "," . $this->attributes['password'] . "," . $this->attributes['membership'] . "," . $this->attributes['admin'] .
             "," . $this->attributes['card_name'] . "," . $this->attributes['card_number'] . "," . $this->attributes['card_exp'] . "," . $this->attributes['card_type'] . ");");
     }
+    /*
 
     public function createClass()
     {
